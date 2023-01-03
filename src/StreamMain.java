@@ -5,11 +5,11 @@ import java.util.stream.Stream;
 public class StreamMain {
 
     public static StreamMain apiRealisation(List<Integer> intList) {
-        Stream<Integer> stream = intList.stream();
-        Stream<Integer> stream1 = stream.filter(x -> x > 0);
-        Stream<Integer> stream2 = stream1.filter(x -> x % 2 == 0);
-        Stream<Integer> stream3 = stream2.sorted(Comparator.naturalOrder());
-        stream3.forEach(System.out::println);
+        Stream<Integer> stream = intList.stream()
+                .filter(x -> x > 0)
+                .filter(x -> x % 2 == 0)
+                .sorted(Comparator.naturalOrder());
+        stream.forEach(System.out::println);
         return null;
     }
 }
